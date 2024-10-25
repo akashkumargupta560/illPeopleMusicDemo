@@ -5,7 +5,7 @@
     .explore {
         display: flex;
         justify-content: space-between;
-        margin: 16px 0px 40px 0px;
+        margin: 16px 0px 0px 0px;
 
         h3 {
             font-size: 30px;
@@ -24,7 +24,7 @@
             font-size: 17px;
             padding: 10px;
             cursor: pointer;
-            background-color: black;
+            background-color: #1e1e1e;
             height: 40px;
             margin-top: 30px;
         }
@@ -35,7 +35,7 @@
         //margin: 16px 0px;
         column-gap: 20px;
         button {
-            background-color: black;
+            background-color: #1e1e1e;
         }
 
         .trending-btn,
@@ -82,7 +82,8 @@
                 padding: 0px 60px;
                 border-radius: 15px;
                 height: 40px;
-                background-color: black;
+                background-color: #1e1e1e;
+                border: 1px solid;
             }
 
             .icon {
@@ -196,7 +197,7 @@
         top: 0;
         overflow: hidden;
         //padding: 30px 0px;
-        background-color: black;
+        background-color: #1e1e1e;
 
         .filter {
             display: flex;
@@ -232,7 +233,7 @@
 
             select {
                 border: none;
-                background-color: black;
+                background-color: #1e1e1e;
             }
         }
     }

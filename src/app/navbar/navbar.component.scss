@@ -1,0 +1,237 @@
+.navbar-page {
+    margin-top: 20px;
+    // overflow: hidden;
+    // background-color: #333;
+    // position: fixed;
+    // top: 0;
+    // width: 100%;
+    .first-navbar {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(0.25turn, rgb(31, 30, 30), rgb(252, 252, 252), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        width: 100%;
+        padding-bottom: 15px;
+
+        .logo-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 47px;
+            
+            .main-search {
+                width: calc(100% - 196px);
+                height: 35px;
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                .search-section {
+                    display: flex;
+                    background: #303030;
+                    border: 0.75px solid #616161;
+                    border-radius: 6px;
+                    width: 100%;
+                    align-items: center;
+                    height: 100%;
+                    padding: 5px;
+
+                    .input-field {
+                        border-radius: 6px;
+                        padding: 0px 15px;
+                        background: unset;
+                        border: unset;
+                        height: 100%;
+                        line-height: 19px;
+                        letter-spacing: .01em;
+                        color: #8a8a8a;
+                        width: calc(100% - 96px);
+                    }
+
+                    .beats {
+                        display: block;
+                        width: 120px;
+                        min-width: 120px;
+                        font-family: inter-regular, sans-serif;
+                        background: #3f3f3f;
+                        border-radius: 3px;
+                        color: #fff;
+                        height: 29px;
+                        border: none;
+                        padding: 0px 6px;
+                    }
+                }
+            }
+
+        }
+
+        .signup-section {
+            // display: flex;
+            // justify-content: space-around;
+            display: flex;
+           
+            margin-right: 60px;
+            column-gap: 20px;
+            .sign-in-btn {
+                margin-top: 10px;
+
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                    //margin:0;
+                }
+
+                a:after {
+                    display: block;
+                    content: '';
+                    border-bottom: solid 3px #fff;
+                    transform: scaleX(0);
+                    transition: transform 250ms ease-in-out;
+                }
+
+                a:hover:after {
+                    transform: scaleX(1.5);
+                }
+            }
+
+            .selling-btn {
+                .btn-primary {
+                    height: 38px;
+                    width: 100%;
+                    background: linear-gradient(169deg, #7000FF 0%, #7A00FF 31.77%, #8F00FF 100%);
+                    border: none;
+                    border-radius: 6px;
+                }
+            }
+        }
+    }
+
+    .second-navbar {
+        margin-top: 20px;
+        border-bottom: 1px solid transparent;
+        border-image: linear-gradient(0.25turn, rgb(31, 30, 30), rgb(252, 252, 252), rgba(255, 255, 255, 0));
+        border-image-slice: 1;
+        width: 100%;
+        padding-bottom: 15px;
+
+        .music-list {
+            display: flex;
+            column-gap: 50px;
+            margin-left: 50px;
+            span {
+                cursor: pointer;
+            }
+
+            span:after {
+                display: block;
+                content: '';
+                border-bottom: solid 3px #fff;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
+
+            }
+
+            span:hover:after {
+                transform: scaleX(1);
+            }
+
+            .list-items:after {
+                display: block;
+                content: '';
+                border-bottom: solid 3px #fff;
+                transform: scaleX(0);
+                transition: transform 250ms ease-in-out;
+
+            }
+
+            .list-items:hover:after {
+                transform: scaleX(1);
+            }
+        }
+
+        .beats-list {
+            display: none;
+            margin-top: 10px;
+            text-transform: capitalize;
+            ul {
+                margin: 0px -40px;
+            }
+
+            u,
+            li {
+                list-style-type: none;
+                // padding: 5px 0px;
+                font-size: 20px;
+                // margin: 0;
+                cursor: pointer;
+                display: contents;
+
+                img {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+
+        .genre-list {
+            display: none;
+            font-size: 10px;
+            //margin-top: 10px;
+            //padding: 5px;
+            text-transform: capitalize;
+
+            ul {
+                // display: flex;
+                // border: none;
+                // list-style-type: none;
+                // margin: 0px -75px;
+                display: flex;
+                border: none;
+                list-style-type: none;
+                margin: 10px -75px 0px 0px;
+                column-gap: 25px;
+                li {
+                    font-size: 18px;
+
+                    a {
+                        text-decoration: none;
+
+                        img {
+                            height: 70px;
+                            width: 70px;
+                            margin: 0;
+                            padding-bottom: 10px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .beat-btn:hover .beats-list {
+        display: block;
+        display: flex;
+        column-gap: 50px;
+    }
+
+    .genre-btn:hover .genre-list {
+        display: block;
+    }
+
+}
+
+.mobile-view-main-search {
+    display: none;
+}
+
+@media only screen and (max-width: 756px) {
+    .mobile-view-main-search {
+        display: block
+    }
+
+    .main-search {
+        display: none !important;
+    }
+}

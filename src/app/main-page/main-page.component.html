@@ -4,10 +4,19 @@
         <button type="button" class="refresh-btn">Refresh</button>
     </div>
     <div class="btn-groups">
-        <button type="button" class="trending-btn">Trending Beats</button>
-        <button type="button" class="WAV-btn">WAV under &#8377;9999</button>
-        <button type="button" class="stems-btn">Wav + Stems under &#8377;1,999</button>
-        <button type="button" class="exclusive-btn">Beats with Exclusive</button>
+      
+        <div class="buttons trending-btn">
+            <p>Trending Beats</p>
+        </div>
+        <div class="buttons WAV-btn">
+            <p>WAV under &#8377;9999</p>
+        </div>
+        <div class="buttons stems-btn">
+            <p>Wav + Stems under &#8377;1,999</p>
+        </div>
+        <div class="buttons exclusive-btn">
+            <p>Beats with Exclusive</p>
+        </div>
     </div>
     <div class="search-toggle">
         <div class="search-icon">
@@ -45,7 +54,21 @@
             </select>
         </div>
     </div>
-
+    <div class="mobile-view-filter-section">
+        <div class="filter-btn">
+            <button class="filter">
+                <i class="fa fa-sliders" aria-hidden="true"></i>
+                Filters
+            </button>
+        </div>
+        <div class="mobile-toggle-buttons">
+            <input type="checkbox" class="toggles" id="toggles" />
+            <label for="toggles">
+                <span class="on"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                <span class="off"><i class="fa fa-th-large" aria-hidden="true"></i></span>
+            </label>
+        </div>
+    </div>
     <div class="play-list-section">
         <ul>
             <li>
@@ -62,9 +85,9 @@
                             <div class="beat-title">{{data.title}}</div>
                             <div class="music-beat">
                                 <p class="general-name">{{data.producer.store.general.name}}</p>
-                                <p class=""><img src="../../assets/icon/beat-play.png" alt="" height="12"
+                                <p class="beat-play"><img src="../../assets/icon/beat-play.png" alt="" height="12"
                                         width="12" />{{data.tempo}} BPM</p>
-                                <p class=""><img src="../../assets/icon/audio-icon.png" alt="" height="12"
+                                <p class="audio-icon"><img src="../../assets/icon/audio-icon.png" alt="" height="12"
                                         width="12" />{{data.key}}</p>
                             </div>
                         </div>
@@ -86,7 +109,7 @@
                         </div>
                     </div>
                 </div>
-            }
+                }
             </li>
         </ul>
     </div>

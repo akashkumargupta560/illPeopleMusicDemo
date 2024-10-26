@@ -1,14 +1,16 @@
-//@import "compass/css3";
 .main-page {
     margin: 0px 60px 0px 60px;
-
     .explore {
         display: flex;
         justify-content: space-between;
-        margin: 16px 0px 0px 0px;
+        margin: 16px 0px 16px 0px;
 
         h3 {
-            font-size: 30px;
+            font-family: inter-medium, sans-serif !important;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1.5rem;
+            line-height: 29px;
 
             span {
                 color: #a098ff;
@@ -17,36 +19,46 @@
         }
 
         button {
-            width: 8%;
-            border-radius: 20px;
-            border: 1px solid #a098ff;
-            color: #a098ff;
-            font-size: 17px;
-            padding: 10px;
+       
             cursor: pointer;
             background-color: #1e1e1e;
-            height: 40px;
             margin-top: 30px;
+            width: 101px;
+            height: 39px;
+            font-family: inter-medium, sans-serif !important;
+            font-weight: 500;
+            font-style: normal;
+            font-size: 1rem;
+            line-height: 19px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #d49cff;
+            border-radius: 42px;
+            border: 1px solid #D094FF;
+            margin-right: 20px;
         }
     }
 
     .btn-groups {
+    
         display: flex;
-        //margin: 16px 0px;
-        column-gap: 20px;
-        button {
-            background-color: #1e1e1e;
+
+    cursor: pointer;
+      
+        .buttons {
+           
+            align-items: center;
+            border-radius: 25px;
+            padding: 0px 30px;
+            background: #262626;
+            border: 1px solid #383838;
+            font-size: .75rem;
+            margin-right: 15px;
+         
         }
 
-        .trending-btn,
-        .WAV-btn,
-        .stems-btn,
-        .exclusive-btn {
-            height: 40px;
-            width: 15%;
-            border-radius: 15px;
-            border: 1px solid;
-        }
+      
 
         .trending-btn:hover {
             background: linear-gradient(110deg, #7000FF 36.5%, #8F00FF 93.9%);
@@ -88,7 +100,7 @@
 
             .icon {
                 position: absolute;
-                left: 10px;
+                left: 15px;
                 top: 50%;
                 transform: translateY(-50%);
                 pointer-events: none;
@@ -118,8 +130,6 @@
                         display: inline-block;
                         position: relative;
                         cursor: pointer;
-                        // @include transition(all .25s ease-in);
-                        // @include box-shadow(inset 0px 0px 2px rgba(0,0,0, .5));
 
                         &:before,
                         &:hover:before {
@@ -132,8 +142,6 @@
                             height: 36px;
 
                             z-index: 2;
-                            //   @include transition(all .25s ease-in);
-                            //   @include border-radius(14px);
 
                         }
 
@@ -192,16 +200,18 @@
     .filter-section {
         display: flex;
         justify-content: space-between;
-        margin: 16px 0px;
+      
         position: sticky;
         top: 0;
         overflow: hidden;
-        //padding: 30px 0px;
+ 
         background-color: #1e1e1e;
+        font-size: 12px;
+        font-family: sans-serif;
+        font-weight: 600;
 
         .filter {
             display: flex;
-            // margin: 0;
             column-gap: 20px;
 
             p {
@@ -209,13 +219,12 @@
             }
 
             .filter-list {
-                // margin: 0;
-               
                 ul {
                     display: flex;
                     list-style-type: none;
                     padding: 0;
-                   column-gap: 20px;
+                    column-gap: 20px;
+
                     li,
                     i {
                         color: #6c6868 !important;
@@ -227,6 +236,7 @@
         .latest-music {
             display: flex;
             column-gap: 10px;
+
             p {
                 color: gray;
             }
@@ -238,84 +248,91 @@
         }
     }
 
-    .play-list-section {
-        //margin: 25px 0px;
+    .mobile-view-filter-section {
+        display: none;
+    }
 
+    .play-list-section {
         ul {
-            // margin: 0;
             padding: 0;
             list-style-type: none;
 
             li {
-                //margin: 0;
                 cursor: pointer;
 
                 .list-items {
                     display: flex;
                     justify-content: space-between;
-                    //margin: 0;
                     padding: 20px 0px;
-
 
                     .play-item {
                         display: flex;
-                        //margin: 0;
+
                         column-gap: 20px;
+
                         .play-icon {
-                            font-size: 40px;
+                            font-size: 32px;
                         }
 
                         .image {
-                            //margin: 0;
-
-                            img {
-                                //margin: 0;
-                            }
+                            img {}
                         }
 
                         .beat-list {
-                            // margin: 0;
-                            // padding-top: 5px;
+                            .beat-title {
+                                font-size: 16px;
+                                font-family: sans-serif;
+                            }
 
                             .beat-title:hover {
                                 text-decoration: underline;
                             }
-                        }
 
-                        .music-beat {
-                            display: flex;
-                            //margin: 0;
+                            .music-beat {
+                                display: flex;
 
-                            p {
-                                //margin: 0px 0px 0px 15px;
-                                margin: 6px 6px 0px 0px;
+                                p {
+                                    margin: 6px 6px 0px 0px;
 
-                                img {
-                                    margin: 0px 6px;
+                                    img {
+                                        margin: 0px 6px;
+                                    }
                                 }
-                            }
 
-                            .general-name {
-                                color: gray;
-                            }
+                                .general-name {
+                                    font-size: 14px;
+                                    font-family: sans-serif;
+                                    color: gray;
+                                }
 
-                            .general-name:hover {
-                                text-decoration: underline;
+                                .general-name:hover {
+                                    text-decoration: underline;
+                                }
+
+                                .beat-play {
+                                    font-size: 12px;
+                                    font-family: sans-serif;
+                                }
+
+                                .audio-icon {
+                                    font-size: 12px;
+                                    font-family: sans-serif;
+                                }
                             }
                         }
                     }
 
                     .price-item {
                         display: flex;
-                        //margin: 10px 0px 0px 0px;
                         column-gap: 15px;
+
                         .discount {
                             display: flex;
-                           // margin: 0;
-                            font-size: 14px;
+                            font-size: 10px;
+                            font-family: sans-serif;
 
                             p {
-                                padding: 5px 10px;
+                                padding: 10px 10px;
                                 background-color: gray;
                                 border-radius: 20px;
                                 margin-top: 12px;
@@ -326,13 +343,7 @@
                             margin-top: 10px;
 
                             button {
-                                //margin: 0;
-                                // padding: 10px 15px;
-                                // border: none;
-                                // background: green;
-                                // border-radius: 10px;
                                 color: #fff;
-
                                 height: 32px;
                                 background: linear-gradient(110.3deg, #7000FF 36.5%, #8F00FF 93.9%);
                                 border-radius: 4.44368px;
@@ -341,6 +352,8 @@
                                 border: unset;
                                 width: unset;
                                 cursor: pointer;
+                                font-size: 14px;
+                                font-family: sans-serif;
                             }
 
                             i {
@@ -357,7 +370,7 @@
             }
         }
     }
-  
+
 }
 
 .list-items.list-hover:hover {
@@ -369,10 +382,389 @@
     }
 }
 
-@media only screen and (max-width: 756px) {
-    .main-page{
+@media only screen and (max-width: 1200px) {
 
+    /* Adjustments for large tablets or smaller desktops */
+    .main-page {
+        margin: 0px 30px;
+    }
+
+    .btn-groups button {
+        width: 20%;
+    }
+
+    .search-toggle .input-beats {
+        width: 25%;
+    }
+
+    .filter-section,
+    .play-list-section {
+        padding: 10px;
     }
 }
 
+@media only screen and (max-width: 992px) {
 
+    /* Adjustments for tablets */
+    .main-page {
+        margin: 0px 20px;
+
+        .explore{
+            margin: 10px 15px;
+            h3{
+                font-family: inter-medium, sans-serif !important;
+                font-weight: 500;
+                font-style: normal;
+                font-size: 1.5rem;
+                line-height: 29px;
+            }
+        }
+        .btn-groups{
+            margin: 0px 15px;
+        }
+        .search-toggle{
+            margin: 0px 13px;
+            .search-icon{
+                .input-beats{
+                    width: 40%;
+                }
+
+            }
+        }
+        .filter-section {
+            display: none;
+        }
+
+        .toggle-buttons {
+            display: none;
+        }
+
+        .mobile-view-filter-section {
+            display: block;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px 0 10px;
+            position: sticky;
+            top: 0;
+            overflow: hidden;
+            background-color: #1e1e1e;
+
+            .filter-btn {
+
+                button {
+                    height: 40px;
+                    border-radius: 10px;
+                    border: 1px solid;
+                    padding: 13px;
+                    background-color: #1e1e1e;
+                }
+            }
+
+            input[type="checkbox"] {
+
+                &.toggles {
+
+                    opacity: 0;
+                    position: absolute;
+                    left: -99999px;
+
+                    &+label {
+
+                        height: 40px;
+                        line-height: 40px;
+                        background-color: #626262;
+                        padding: 0px 16px;
+                        border-radius: 16px;
+                        display: inline-block;
+                        position: relative;
+                        cursor: pointer;
+
+                        &:before,
+                        &:hover:before {
+
+                            content: ' ';
+                            position: absolute;
+                            top: 2px;
+                            left: 2px;
+                            width: 46px;
+                            height: 36px;
+
+                            z-index: 2;
+
+                        }
+
+                        .off,
+                        .on {
+                            color: #fff;
+                        }
+
+                        .off {
+                            margin-left: 46px;
+                            display: inline-block;
+                        }
+
+                        .on {
+                            display: none;
+                        }
+
+                    }
+
+                    &:checked+label {
+
+                        .off {
+                            display: none;
+                        }
+
+                        .on {
+                            margin-right: 46px;
+                            display: inline-block;
+                        }
+
+                    }
+
+                    &:checked+label,
+                    &:focus:checked+label {
+
+                        background-color: #67a5ec;
+
+                        &:before,
+                        &:hover:before {
+
+                            background-position: 0 0;
+                            top: 2px;
+                            left: 100%;
+                            margin-left: -48px;
+
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .play-list-section {
+            ul {
+                li {
+                    .list-items {
+                        .price-item {
+                            .discount {
+                                display: none;
+                            }
+
+                            .price-btn {
+                                button {
+                                    font-size: 10px;
+                                    font-family: sans-serif;
+                                }
+                            }
+                        }
+
+                        .play-item {
+                            .beat-list {
+                                .beat-title {
+                                    font-size: 12.8px;
+                                    font-family: sans-serif;
+                                }
+
+                                .music-beat {
+                                    .general-name {
+                                        font-size: 14px;
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+ 
+
+    
+    .search-toggle .input-beats {
+        width: 35%;
+    }
+
+    .filter-section .filter-list ul {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .filter-section .latest-music p,
+    .filter-section .latest-music select {
+        font-size: 14px;
+    }
+
+
+    @media only screen and (max-width: 768px) {
+
+        /* Adjustments for large mobile phones */
+        .main-page {
+            margin: 0px 20px;
+            .explore{
+                margin: 10px 15px;
+                h3{
+                    font-family: inter-medium, sans-serif !important;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: 1rem;
+                    line-height: 29px;
+                }
+                button{
+                    width: 74px;
+                    height: 27px;
+                    font-size: .72rem;
+                    margin-top: 15px;
+                }
+            }
+            .btn-groups{
+                display: flex !important;
+                margin: 0px 15px;
+            
+                .buttons {
+                    width: 25%;
+                    font-size: 12px;
+                    padding: 0;
+                    p{
+                        text-align: center;
+                        margin: 5px;
+                    }
+                }
+            }
+            .search-toggle{
+                margin: 0px 13px;
+            }
+            .play-list-section {
+                ul {
+                    li {
+                        .list-items {
+                            .play-item {
+                                .play-icon {
+                                    display: none;
+                                }
+
+                                .beat-list {
+                                    .music-beat {
+                                        .audio-icon {
+                                            display: none;
+                                        }
+
+                                        .general-name {
+                                            white-space: nowrap;
+                                            width: 100px;
+                                            overflow: hidden;
+                                            text-overflow: ellipsis;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    @media only screen and (max-width: 576px) {
+
+        /* Adjustments for smaller mobile phones */
+        .main-page {
+            margin: 0px 30px;
+
+            .explore{
+                margin: 10px 15px;
+            }
+            .btn-groups{
+                margin: 0px 15px;
+                .buttons{
+                    width: fit-content;
+                    margin: 0;
+                }
+            }
+            .search-toggle{
+                margin: 0px 13px;
+            }
+            .play-list-section {
+                ul {
+                    li {
+                        .list-items {
+                            .play-item {
+                                .play-icon {
+                                    display: none;
+                                }
+
+                                .beat-list {
+                                    .music-beat {
+                                        .beat-play {
+                                            display: none;
+                                        }
+                                    }
+                                }
+
+                                .beat-list {
+                                    .beat-title {
+                                        font-size: 12.8px;
+                                        font-family: sans-serif;
+                                        white-space: nowrap;
+                                        width: 100px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+
+                                    .general-name {
+                                        font-size: 14px;
+                                        font-family: sans-serif;
+                                        white-space: nowrap;
+                                        width: 100px;
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+                                }
+                            }
+
+                            .price-item {
+                                .price-btn {
+                                    margin: 0;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+      
+    }
+
+    @media only screen and (max-width: 412px) {
+
+        /* Adjustments for very small screens */
+        .main-page {
+            margin: 0;
+
+            .explore{
+                margin: 0px 15px;
+            }
+            .btn-groups{
+                margin: 10px 15px;
+                .buttons{
+                    width: fit-content;
+                    font-size: 10px;
+                }
+            }
+            .search-toggle{
+                margin: 0px 13px;
+                }
+            
+
+        }
+    }
+}
